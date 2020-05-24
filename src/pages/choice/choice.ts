@@ -4,6 +4,8 @@ import { Breed } from '../../types/breed';
 import { Characteristics } from '../../types/characteristics';
 import { SignupPage } from '../signup/signup';
 
+//teste 2
+
 @IonicPage()
 @Component({
   selector: 'page-choice',
