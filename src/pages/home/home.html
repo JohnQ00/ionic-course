@@ -1,14 +1,26 @@
 <ion-header>
   <ion-navbar>
     <ion-title>
-      Ionic Blank
+      AluraPet
     </ion-title>
   </ion-navbar>
 </ion-header>
 
 <ion-content padding>
-  The world is your oyster.
-  <p>
-    If you get lost, the <a href="http://ionicframework.com/docs/v3">docs</a> will be your guide.
-  </p>
+  <ion-list>
+    <ion-item *ngFor="let breed of breeds" (click)="selectBreed(breed)">
+      <h2>{{breed.name}}</h2>
+      <p>{{breed.age}} years</p>
+    </ion-item>
+    <!--<ion-item>Pinscher</ion-item>
+    <ion-item>Husky Siberiano</ion-item>
+    <ion-item>Labrador</ion-item>
+    <ion-item>Pug</ion-item>
+    <ion-item>Poodle</ion-item>
+    <ion-item>Persa</ion-item>
+    <ion-item>Ragdoll</ion-item>
+    <ion-item>Sphynx</ion-item>
+    <ion-item>Siamês</ion-item>
+    <ion-item>Maine Coon</ion-item>-->
+  </ion-list>
 </ion-content>

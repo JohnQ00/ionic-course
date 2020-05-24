@@ -1,0 +1,40 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>Sign Up</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+  <h2>{{ breed.name }}</h2>
+  <p>R$ {{ totalExpenses }}</p>
+
+  <form (ngSubmit)="schedule()" #formie="ngForm">
+    <ion-item>
+      <ion-label stacked>Name:</ion-label>
+      <ion-input [(ngModel)]="name" name="name"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Adress:</ion-label>
+      <ion-input [(ngModel)]="adress" name="adress"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>E-mail:</ion-label>
+      <ion-input [(ngModel)]="email" name="email"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-label stacked>Date:</ion-label>
+      <ion-datetime [(ngModel)]="date" name="date" dateFormat="dd/mm/yyyy"></ion-datetime>
+    </ion-item>
+  </form>
+
+  <ion-fab top right edge>
+    <button ion-fab (click)="formie.ngSubmit.emit()">
+      <ion-icon name="send"></ion-icon>
+    </button>
+  </ion-fab>
+
+</ion-content>
